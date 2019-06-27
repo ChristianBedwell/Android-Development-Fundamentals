@@ -35,16 +35,15 @@ public class WordListAdapter extends
         }
     }
 
-    public WordListAdapter(Context context,
-                           LinkedList<String> wordList) {
+    public WordListAdapter(Context context, LinkedList<String> wordList) {
         mInflater = LayoutInflater.from(context);
         this.mWordList = wordList;
     }
 
     @Override
     public WordListAdapter.WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View mItemView = mInflater.inflate(R.layout.wordlist_item,
-                parent, false);
+        View mItemView = mInflater.inflate(
+                R.layout.wordlist_item, parent, false);
         return new WordViewHolder(mItemView, this);
     }
 
